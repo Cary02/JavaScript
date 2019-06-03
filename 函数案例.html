@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数案例</title>
+    <script>
+
+         /*function getSum(a, b) {
+             a = 100;
+             b = 120;
+             console.log(a + b);
+         }
+         var x = 1;
+         var y = 4;
+         getSum(x, y);*/
+        //如果在内部修改形参的值不会影响实参的值，因为调用函数的时候只是把实参的值赋值给形参
+
+
+        //求圆的面积
+        /* function getArea(r) {
+             var pi = 3.14159;
+             console.log(pi * r * r);
+         }
+         getArea(5);*/
+
+        //求三个数的最大值
+        /* function getMax(a, b, c) {
+             if (a > b && a > c) {
+                 console.log(a);
+             } else if (b > a && b > c) {
+                 console.log(b);
+             } else if (c > a && c > b) {
+                 console.log(c);
+             }
+         }
+         getMax(5, 33, 7);*/
+
+        //求N个数的最大值
+        /*function getMax(arr) {
+            var max = array[0];
+            for (var i = 1; i < array.length; i++) {
+                 //判断数组中数值大小
+                if (max < array[i]) {
+                    max = array[i];
+                }
+            }
+            console.log(max);
+        }
+        var array = [1, 4, 45, 650,87,100];
+        getMax(array);*/
+
+
+        //判断一个数是否是素数，（只能被一和自身整除的数）
+        /*function jdugePrimeNumber(number) {
+            var isOk = true;
+
+            //用for把1和number之间的数遍历出来除了1和number，再用number/ i；再判断
+            for (var i = 2; i < number; i++) {
+
+                //判断是否能被number整除
+                if (number % i === 0) {
+                    //如果执行了，就不是素数
+                    isOk = false;
+                    break;
+                }
+            }
+            if (isOk) {
+                console.log('素数！');
+            } else {
+                console.log('不是素数！');
+            }
+        }
+        jdugePrimeNumber(13);*/
+
+        //错误案例
+         /*function jdugePrimeNumber(number) {
+
+
+             //用for把1和number之间的数遍历出来除了1和number，再用number/ i；再判断
+             for (var i = 2; i < number; i++) {
+
+                 //判断是否能被number整除
+                 if (number % i === 0) {
+                     //如果执行了，就不是素数
+                     console.log(number + '是素数');
+                     break;
+                 }
+                 else {
+                     console.log(number + '不是素数');
+                 }
+             }
+
+         }
+         jdugePrimeNumber(9);*/
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

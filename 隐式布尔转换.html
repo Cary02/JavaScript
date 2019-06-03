@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐式布尔转换</title>
+    <script>
+        // 第一种情况
+        /*var num = 123;
+        if (num) {
+            console.log('hello');
+        }*/
+
+
+
+
+        // 第二种情况
+        /* var str;         //没有赋值的类型是undefind
+         //自动转换成false
+         if (str) {
+             console.log('hello');
+         } */
+
+
+        // 第三种情况
+        var str = '123'
+        var isOK = !str;
+        console.log(isOK);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

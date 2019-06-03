@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>break and continue</title>
+    <script>
+
+
+        // break 破坏   终止循环 ，循环不再执行
+        //continue  继续   跳出循环，继续下一次循环
+
+
+        //求整数50~200的第一个能被7整除的数
+        for (var i = 50; i <= 200; i++) {
+            if (i % 7 === 0) {
+                console.log(i);
+                break;
+            }
+        }
+        console.log('over');
+
+        //求整数1~100的值累加，但要求跳过个数为3的数
+        // 方法1
+        /*var sum = 0;
+
+        for (var i = 1; i <= 100; i++) {
+
+            if (i % 10 === 3) {
+                //如果找到数字为3的数，则继续执行下一次循环
+                continue;
+            }
+            sum += i;
+
+        }
+        console.log(sum);*/
+
+
+
+        // 方法2
+        /*var sum = 0;
+
+        for (var i = 1; i <= 100; i++) {
+
+            if (i % 10 === 3) {
+                console.log(i);
+            }else {
+                sum += i;
+            }
+        }
+        console.log(sum);*/
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sort()方法</title>
+    <script>
+
+        //sort默认情况下是对字符编码 从小到大排序
+
+
+        /*var arr = [1, 4, 9, 3, 6];
+        function compare(a, b) {
+            return a - b;
+        }
+        console.log(arr);
+        console.log(arr.sort(compare));*/
+        
+        
+        //简化代码
+        /*var arr = [1, 4, 9, 3, 6];
+        arr.sort(function (a, b) {
+            return a - b;
+        });
+        console.log(arr);*/
+        
+        var arr = ['abc', 'ab', 'a', 'abcdef', 'xy'];
+        arr.sort(function (a, b) {
+            return a.length - b.length;
+        })
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

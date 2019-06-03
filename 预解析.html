@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预解析</title>
+    <script>
+        /*预解析
+           1.变量提升，把变量的声明提升到当前作用域的最上面，不包括变量的赋值
+           2.函数提升，把函数的声明提升到当前作用域的最上面，不包括函数的调用*/
+
+        //案例一
+       /* console.log(num);
+        var num = 5;
+
+        //预解析
+        var num;
+        console.log(num);
+        num = 5;
+        结果：undefind*/
+
+
+        //案例二
+       /* f1();
+        function f1() {
+            console.log('hello');
+        }
+
+        //预解析
+        function f1() {
+            console.log('hello');
+        }
+        f1();*/
+
+
+        //习题一
+       /* var a = 25;
+        function abc() {
+            alert(a);
+            var a = 10;
+        }
+        abc();*/
+        //预解析
+        /*var a;
+        function abc() {
+            var a;
+            alert(a);
+            a = 10;
+        }
+        a = 25;
+        abc();*/
+        //结果：undefind
+
+        //习题二
+        /*console.log(a);
+
+         //注意：在解析过程中如果函数和变量的名字相同，此时函数优先
+
+         function a() {
+            console.log('aaaaa');
+        }
+        var a = 1;
+        console.log(a);
+        //预解析
+        var a;
+        function a() {
+            console.log('aaaaa');
+        }
+        console.log(a);
+        a = 1;
+        console.log(a);
+        结果：a（） 和 1*/
+        
+
+        //1------------------------
+        /*var num = 10;
+        fun();
+        function fun() {
+            console.log(num);
+            var num = 20;
+        }
+
+        //预解析
+        var num;
+        function fun() {
+            var num;
+            console.log(num);
+            num = 20;
+        }
+        num = 10;
+        fun();
+        //结果：undefin*/
+
+
+        //2----------------------
+       /* var a = 18;
+        f1();
+        function f1() {
+            var b = 9;
+            console.log(a);
+            console.log(b);
+            var a = '123'
+        }
+
+        //预解析
+        var a ;
+        function f1() {
+            var b;
+            var a;
+            b = 9;
+            console.log(a);
+            console.log(b);
+            a = '123';
+        }
+        a = 18;
+        f1();*/
+        //结果：undefind 和 9
+
+
+        //3------------------------
+       /* f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+
+        //预解析                         var a = b = c = 9  等于
+        function f1() {                 var a;
+            var a;                      a = b = c = 9
+            a = 9;
+            b = 9;
+            c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+        //结果：9 9 9 和 9 9 undefind*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

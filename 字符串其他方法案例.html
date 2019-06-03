@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串其他方法案例</title>
+    <script>
+        //concat()  拼接字符串，等效于+
+        var a = 'abc';
+        var b = '123';
+        console.log(a.concat(b));
+        
+        
+        //substr()截取字符串，从start开始截取到length长度
+        var s = 'cvfgthnju4efghj';
+        console.log(s.substr(2, 4));
+        
+        //to(locale)UpperCase()转换大写   
+        //to(locale)LowerCase()转换小写
+        var s = 'aCVdeG';
+        console.log(s.toLocaleLowerCase());
+        console.log(s.toLocaleUpperCase());
+        
+        
+        //search()和indexOf类似，放回索引，比indexOf更强大
+        var s = 'cvfgthnju4efghj';
+        console.log(s.search('g'));
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

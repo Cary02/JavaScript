@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组案例2</title>
+    <script>
+        //要求将数组中的0项去掉，将不为0的值存进一个新的数组，生成新的数组
+        /*
+         var numbers = [4, 5, 64, 0, 34, 0, 25, 74];
+         var newArray = [];
+         for (var i = 0; i < numbers.length; i++) {
+             if (numbers[i] !== 0) {
+                 newArray [newArray.length] = numbers[i];
+                 //array [array.length] = 4;   array.length = 0     [4]
+                 //array [array.length] = 5;   array.length = 1     [4.5]
+                 //array [array.length] = 64;   array.length = 2     [4.5,64]
+                 //array [array.length] = 0;   array.length = 2     [4.5,64]
+             }
+         }
+         console.log(newArray);
+
+
+         //翻转数组
+
+            //倒着遍历数组
+            for (i = numbers.length - 1; i >= 0; i--) {
+                // 遍历的数组存入新的数组中去
+                newArray [newArray.length] = numbers[i];
+            }
+            console.log(numbers);
+            console.log(newArray);
+            */
+
+
+
+
+        //冒泡排序
+
+        var numbers = [3, 5, 64, 33, 34, 22, 25, 74];
+        var tmp;
+
+        var count = 0;
+        //外部趟循环，控制趟数，每一趟找到最大值
+        for (var i = 0; i < numbers.length - 1; i++) {
+            count++;
+            //检验排序是否排序好
+            var isOk = true;
+            //内层循环，控制比较次数，并且判断两个数的大小，把大的往后移，小的往前
+            //反转次数 7 6 5 4 3 2 1 0
+            for (var j = 0; j < numbers.length - 1 - i; j++) {
+                count++;
+                //两两比较， 从小到大
+                if (numbers[j] > numbers[j + 1]) {
+                    isOk = false;
+
+                    //进行翻转，大的数往后移，前后的值交换。
+                    tmp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = tmp;
+                }
+
+            }
+            if (isOk) {
+                console.log( isOk );
+                break;
+            }
+
+            //某一趟结束， 判断一下排序是否结束
+            //如何判断排序是否排好， 根据是否发生了数据交换，如果发生交换表示没排好
+
+        }
+        console.log( numbers );
+        console.log( count );
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

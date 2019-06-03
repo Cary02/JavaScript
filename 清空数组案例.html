@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清空数组案例</title>
+    <script>
+        
+        var array = [45, 78, 5, 7,89, 2, 67];
+        //第一种
+        /*array = [];
+        console.log(array);*/
+        
+        
+        //第二种
+        /*array.length = 0;
+        console.log(array);*/
+        
+        //第三种
+        /*参数一是从哪里开始  ， 参数二是要删除几个元素*/
+        array.splice(0, array.length);
+        console.log(array);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

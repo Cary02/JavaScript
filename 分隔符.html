@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分隔符</title>
+    <script>
+        // 将字符串数组用 / 或者其他分割符分割，形成一个字符串
+        var names = ['宋宇琦', '郭德纲', '吴尊', '郑凯', '李晨'];
+
+        //分割后为  '宋宇琦 / 郭德纲 / 吴尊 / 郑凯 / 李晨'
+        //固定的值一般用变量表示，不写在表达式中 ，eg：var seperator = ‘/’
+
+
+        //第一种情况导致李晨后面还有一个 / ；
+        /*var seperator = '/';
+        var str = '';
+        for (var i = 0; i < names.length; i++ ) {
+            str += names[i] + seperator;   //seperator是一个固定值，所以用一个变量表示，不写在表达式中
+        }
+            console.log(str);*/
+
+
+
+        //第二种，在第二个名字开始，每个名字后面加 / ；
+
+        var seperator = '/';
+        var str = names[0];
+        for (var i = 1; i < names.length; i++) {
+            str += seperator + names[i];
+        }
+        console.log(str);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

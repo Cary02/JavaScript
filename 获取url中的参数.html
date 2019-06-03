@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取url中的参数</title>
+    <script>
+        //获取url中？后面的内容
+        //http://www.itheima.com/login?name=zs&age=18&b=2;
+         var url = 'http://www.itheima.com/login?name=zs&age=18&b=2';
+         //方法一
+        // var index = url.indexOf('?');
+         /*var arr = url.split('?');
+          console.log(arr[1]);*/
+
+         /*方法二
+         var index = url.indexOf('?') + 1;
+         var s = url.slice(index, url.length);
+         console.log(s);*/
+
+
+
+
+        // name=zs&age=18&b=2
+
+
+        /*function getParam(url) {
+            //求问号的索引
+            var index = url.indexOf('?') + 1;
+            //截取？后的字符串
+            var params = url.substr(index);
+            //使用&切割字符串，返回数组
+            var arr = params.split('&');
+            var o = {};
+            //遍历数组
+            for (var i = 0; i < arr.length; i++) {
+                //使用=分割数组形成新的数组temArr{name, zs}
+                var temArr = arr[i].split('=');
+                var key = temArr[0];
+                var value = temArr[1];
+                o[key] = value;
+            }
+            console.log(o);
+            console.log(o.name);
+            console.log(o.age);
+            return 0;
+        }
+        getParam(url);*/
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串的不可变</title>
+    <script>
+        //字符串的不可变
+        var s = 'abc';
+        s = 'xxxxyyy';
+        /*新定义字符串的时候会在内存新建一个空间存储abc，
+        当从新赋值的时候会在内存重新开辟一块新空间存储xxxxyyy，
+        原来的abc空间将没人能访问，不久就会被浏览器回收销毁。*/
+
+        //当拼接大量字符串的时候，会有性能问题
+        var r = '';
+        for (var i = 0; i < 100000; i++) {
+            s = s + i;
+        }
+        console.log(s);
+        //每循环一次重新赋值都会在内存中重新开辟一个新的内存空间，
+        // 开辟内存空间是需要时间，循环次数多就会造成浏览器响应时间变长
+    </script>
+</head>
+<body>
+
+</body>
+</html>

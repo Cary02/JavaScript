@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象字面量</title>
+    <script>
+        /*如何创建一个对象，如何使用对象的成员
+        * 对象：属性和方法  --成员
+        * 函数和对象有什么区别
+        * 函数：可以封装一段代码
+        * 对象：封装一组属性和方法*/
+
+
+        //创建dog对象
+        //属性： name   type   color
+        //方法：bark 叫   eat 吃
+        var dog = {
+            name: 'haha',
+            age: 2,
+            type: '中华田园犬',
+            color: 'yellow',
+            bark: function () {
+                //在方法中如何使用属性的值
+                //this在方法中代表的是当前对象 dog
+                console.log(this.name + '汪汪汪');
+            },
+            eat: function () {
+                console.log(this.name + '啃骨头');
+            }
+        }
+
+
+        /*//如何访问属性    对象.属性名
+        console.log(dog.name);
+        console.log(dog.age);
+
+        //如何访问方法  对象.方法名
+        dog.bark();
+        dog.eat();
+
+        //属性的另一种访问方式
+        //访问数组中的元素   array【】
+        console.log(dog['name']);
+
+        //函数和方法有什么区别
+        //函数：独立存在的函数
+        function f() {
+
+        }
+        //函数调用
+        f();
+
+        //方法：属于对象的函数
+        dog.bark();*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

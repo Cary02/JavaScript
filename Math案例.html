@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math案例</title>
+    <script>
+        //求10到20之间的随机数
+
+        /*function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+        }*/
+
+        /*function fn(min, max) {
+            return Math.random() * (max - min + 1) + min;
+        }
+
+        console.log(parseInt(fn(10,20)));*/
+
+
+        //随机生成颜色RGB
+        function fn(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        function RGB(min, max) {
+            var color1 = fn(min, max);
+            var color2 = fn(min, max);
+            var color3 = fn(min, max);
+            return 'rgb (' + color1 + ',' + color2 + ',' + color3 + ')';
+        }
+        console.log(RGB(0, 255));
+
+
+        //模拟实现max()/min()
+        //console.log(Math.max(2, 43, 56, 72, 23));
+        //console.log(Math.min(2, 43, 56, 72, 23));
+
+        //模拟实现max()/min()
+        var getMath = {
+            max: function () {
+                var max = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (max < arguments[i]) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            },
+            min: function () {
+                var min = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (min > arguments[i]) {
+                        min = arguments[i];
+                    }
+                }
+                return min;
+            }
+        }
+        console.log(getMath.min(2, 43, 56, 72, 23));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数其他知识</title>
+    <script>
+        //命名函数
+        /*function fn() {
+
+        }
+
+
+        //1.函数表达式 --匿名函数
+        var fn = function () {
+
+        }
+
+
+        //2.自调用函数  --当函数书写完成后立即调用
+        (function () {
+            console.log('我是自调用函数！');
+        })()*/
+
+
+        //3.函数也是一种数据类型   function也是一种数据类型
+       /* var n = 5;
+        var str = '123';
+        var fn = function () {
+            console.log('我是传过来的参数！');
+        }
+        console.log(typeof fn);
+
+        //4-1因为函数是一种数据类型，所以参数可以作为另一个函数的参数
+        function test(fun) {
+            //当我门调用函数的时候，没有传递参数，此时形参的值是undefind
+            fun();
+        }
+        test(fn);*/
+
+        //4-2因为函数是一种数据类型，所以可以作为另一个函数的返回值
+        /*function test(a) {
+            var b = 5;
+
+            return function () {
+                console.log(a + b);
+            }
+        }
+
+        var fn = test(2);
+        fn();*/
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

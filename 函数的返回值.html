@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的返回值</title>
+    <script>
+        //求一组数中的最大值
+      /*  function getMax(array) {
+            var max = array[0];
+            for (var i = 1; i < array.length; i++) {
+                if (max < array[i]) {
+                    max = array[i];
+                }
+            } 
+            return max;
+        }
+        var array = [1, 4, 45, 650,87,100];
+        //可以通过一个变量接受函数的返回值
+        var max = getMax(array);
+        console.log(max);
+
+        //getMax(array)是一个数值，可以直接使用
+        var num = 5;
+        var result = getMax(array) + num;
+        console.log(result);*/
+
+
+
+        //求n的阶乘
+        function getJieChegn(n) {
+            var result = 1;
+            for (var i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+
+        //求1!+2!+3!+...+n!
+        function getSumJieCheng(n) {
+            //求和
+            var sum = 0;
+            for (var i = 1; i <= n; i++) {
+                //每个i的阶乘累加
+                 sum += getJieChegn(i);
+            }
+            return sum;
+        }
+
+        console.log(getSumJieCheng(5));
+       
+       
+       /*
+       //如果一个函数不需要返回值，可以不写返回值
+        //当函数中不写return的时候，返回的是undefind
+        //return后面可以什么都不跟，返回的类型是undefind
+
+        function test(a, b) {
+            return;    // 函数执行的过程中，遇到return后则不会执行后面的代码。
+            console.log(a, b);
+        }
+
+        var r = test(5, 6);
+        console.log(typeof r);*/
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串方法案例2</title>
+    <script>
+        //截取字符串'我爱中华人民共和国'，中的中华
+        //因为字符串的不可变性，所以s输出不变
+        /*var s = '我爱中华人民共和国';
+        //第一个参数是开始位置的索引 ，第二个参数是截取字符串长度
+        var newStr = s.slice(2, 2);
+        console.log(newStr);
+        console.log(s);*/
+
+
+
+        //'acoefoxyozzopp' 查找字符串中所有的o出现的位置
+        /*var index = -1;
+        var str = 'acoefoxyozzopp';
+        do {
+            var index = str.indexOf('o', index +1);
+            if (index !== -1) {
+                console.log(index);
+            }
+        }while (index !== -1);*/
+        
+        
+        
+        //把字符串所有的o替换成！
+
+        /*var index = -1;
+        var str = 'acoefoxyozzopp';
+        do {
+            var index = str.indexOf('o', index +1);
+            if (index !== -1) {
+                str = str.replace('o', '!');
+            }
+        }while (index !== -1);
+        console.log(str);*/
+
+        
+        //把字符串中所有空白去掉  '   abc         xyz  a    123    '
+        //思路一  用字符串替换的方法 把空白用空字符串''替换
+       /* var index = -1;
+        var str = '   abc         xyz  a    123    ';
+        do {
+            console.log(index);
+
+            var index = str.indexOf(' ', index);
+
+            if (index !== -1) {
+                str = str.replace(' ', '');
+
+            }
+        }while (index !== -1);
+        console.log(str);*/
+
+        //思路二  split()方法
+        var str = '   abc         xyz  a    123    ';
+        var arr = str.split(' '); //方法使用指定的字符将一个String对象分割成字符串数组，找到分隔符后，将其从字符串中删除，并将子字符串的数组返回
+        console.log(arr);
+        //console.log(arr.join(''));  //调用数组方法用''分割开
+
+
+
+        //判断一个字符串中出现次数最多的字符，统计这个数 --->  1.统计每一个字符出现的次数   2.求最大值
+        //存储次数最多的字符
+        /*var ch;
+        //次数最多的字符个数
+        var num;
+        //新建对象存储字符和相对应的次数
+        var o = {};
+        var s = 'acoefoxyozzopp';
+        for (var i = 0; i < s.length; i++) {
+            //取出每一个字符
+            var item = s.charAt(i);
+            //如果o对象中有这个字符就加1
+            if (o[item]) {
+                o[item]++;
+            } else {
+                o[item] = 1;    //没有就让这个字符等于1
+            }
+        }
+        num = 1;
+        //遍历这个o对象
+        for (var key in o) {
+            if (num < o[key]) {
+                num = o[key];
+                ch = key;
+            } 
+        }
+        console.log(ch);
+        console.log(num);*/
+        
+
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

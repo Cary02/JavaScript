@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组对象</title>
+    <script>
+
+
+        //如何判断是否是数组对象
+        /*方法一
+        function fn(d) {
+            if (！(d instanceof Array)) {
+                console.error('是数组');
+                return;
+            }
+            console.log(d);
+        }
+        var d = [];
+        fn(d);*/
+
+        /*方法二     Array.isArray()  浏览器兼容问题
+        function fn (d) {
+            if (! Array.isArray(d)) {
+                console.error('不是数组');
+                return;
+            } 
+            console.log(d);
+        }
+        var d = [1, 2, 3, 5];
+        fn(d);
+        console.log(Array.isArray(d));*/
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象方法</title>
+    <script>
+        //1.对象字面量
+       /* var hero = {
+            name: '后裔',
+            weapon: '弓箭',
+            equipment: ['头盔', '靴子', '盔甲'],
+            blood: 100,
+            attack: function () {
+                console.log(this.name + '射箭');
+            },
+            run: function () {
+                console.log(this.name + '我先溜了');
+            }
+        };
+        console.log(hero.name);
+        console.log(hero.equipment);
+        hero.attack();
+        hero.run();*/
+
+
+        // 2.new Object()
+        //Object 是一个构造函数
+        //new 的方式来调用构造函数
+        //new Object()  调用构造函数  会在内存中创建一个对象
+
+        /*var hero = new Object();
+        //打印一个不存在的属性 输出undefined
+        //console.log(hero.name);
+        hero.name = '黄忠';
+        hero.weapon = '弓箭';
+        hero.equipment = ['靴子', '头盔', '盔甲'];
+        hero.blood = 100;
+        hero.attack = function () {
+            console.log(this.name + '射箭');
+        }
+        hero.run = function () {
+            console.log(this.name + '我先溜了');
+        }*/
+
+
+        //3.工厂方法
+        /*function creatHero(name, weapon, equipment, blood) {
+            var hero = new Object();
+            //属性
+            hero.name = name;
+            hero.weapon = weapon;
+            hero.equipment = equipment;
+            hero.blood = blood;
+            //方法
+            hero.attack = function () {
+                console.log(this.name + '攻击');
+            };
+            hero.run = function () {
+                console.log(this.name + '我先溜了');
+            }
+            return hero;
+        }
+        var hero1 = creatHero('刘备', '剑', ['靴子', '头盔', '盔甲'], 100);
+        var hero2 = creatHero('周瑜', '剑', ['靴子', '头盔', '盔甲'], 100);
+        var hero3 = creatHero('凯皇', '剑', ['靴子', '头盔', '盔甲'], 100);
+        console.log(hero2.name);*/
+
+        //4.自定义构造函数
+        //new Hero();
+        //帕斯卡命名  第一个单词的第一个字母大写，后续每一个单词的第一个字母都大写
+        //自定义构造函数
+        /*function Hero(name, weapon, equipment, blood) {
+            this.name = name;
+            this.weapon = weapon;
+            this.equipment = equipment;
+            this.blood = blood;
+            this.attack = function () {
+                console.log(this.name + '攻击');
+            },
+            this.run = function () {
+                console.log(this.run + '我先溜了');
+            }
+        }
+
+        var hero1 = new Hero('黄忠', '枪', ['靴子', '头盔', '盔甲'], 100);
+        console.log(hero1.weapon);*/
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

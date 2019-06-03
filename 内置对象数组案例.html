@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象数组案例</title>
+    <script>
+        //将一个字符串数组输出为|分割的形式，比如‘刘备|张飞|项羽’ 使用两种方法实现
+        var arr = ['刘备', '张飞', '项羽'];
+
+        console.log(arr.toString());   //刘备，张飞，项羽
+        //join(加想要分割的字符)
+        console.log(arr.join('|'));  //刘备|张飞|项羽
+
+
+
+        //将一个字符串数组的元素的顺序进行反转 ['a', 'b', 'c', 'd',]-->['d', 'c', 'b', 'a',]
+            //使用两种方法实现   提示：第i个和第length - i - 1进行交换；
+        var arr = ['a', 'b', 'c', 'd',];
+        arr.reverse();
+        console.log(arr);
+
+
+
+        //工资的数组[1500, 1200, 2000, 2100, 1800],把工资超过两千的删除
+        var arr = [1500, 1200, 2000, 2100, 1800];
+        var newArray = arr.filter(function (item) {
+            return item < 2000;  //返回值是元素item
+        })
+        console.log(newArray);
+
+
+        //['a', 'b', 'a', 'd',]找到数组中每一个a出现的位置
+        /*方法一
+        var arr = ['a', 'b', 'a', 'd',];
+        function fn(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === 'a') {
+                    console.log(i);
+                }
+            }
+        }
+        fn(arr);*/
+
+
+        // 方法二
+
+        var arr = ['a', 'b', 'a', 'd', 'a'];
+        // 从前往后找元素
+        console.log(arr.indexOf('a'));
+        // 从后往前找元素
+        console.log(arr.lastIndexOf('a'));
+        //第二个参数是设置查找开始的位置从0开始
+        console.log(arr.indexOf('a', 0));
+        
+        //如果没找到元素 indexOf 会返回-1
+        var index = -1;
+        do {
+            var index = arr.indexOf('a', index + 1);
+            if (index !== -1) {
+                console.log(index);
+            } 
+        } while (index !== -1);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

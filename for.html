@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for</title>
+    <script>
+
+
+        //一对数列规律如下（1，1，2，3，5，8，13，21）求12个数的值是多少？
+
+        /*var n1 = 1;                                     // n1=1;n1=1;n1=2;
+        var n2 = 1;                                     // n2=1;n2=2;n2=3;
+        var n3;                                         // n3=2;n3=3;n3=5
+         for (var i = 3; i <= 12; i++){                 //后一行的n1等于前一行的n2,n2等于前一行的n3;
+            n3 = n2 + n1;
+            n1 = n2;
+            n2 = n3;
+        }
+         console.log(n3);*/
+
+
+        //本金10000 ，利息0.003 ，每年累加，五年多少钱
+
+        var money = 10000;
+        var rate = 0.003;
+        for (var i = 0; i < 5; i++) {
+            money += money * rate;
+        }
+        console.log(money);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+    <script>
+        //数组  是一种数据类型
+
+        //数组能储存多项，有顺序，可以是不同类型的数据形成的一个集合array；
+        var names = ['zs', 'ls', 'ww', 'lnn']
+
+        //通过索引和下标获取array中的数据，第一项从0开始；
+        console.log(names[2]);
+
+        //获取数组长度
+        console.log(names.length);
+        //获取数组最后一项
+        console.log(names[names.length - 1]);
+
+        //如何修改数组中的元素
+        names[0] = 'xxx'
+        console.log(names);
+
+        //遍历数组并且打印
+        for (var i = 0; i < names.length; i++) {
+            console.log(names[i]);
+        }
+
+        //遍历数组，从最后一项开始打印   最后一项 length - 1  倒数第二项 length - 2
+        for (var i = names.length - 1; i >= 0; i--) {
+            console.log(names[i]);
+        }
+
+        //补充
+
+        //填充数组
+        var scores = [];
+        for (var i = 0; i < 10; i++) {
+            scores[i] = i;
+        }
+        console.log(scores);
+
+        //清空数组
+        scores.length = 0;
+        console.log(scores);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
